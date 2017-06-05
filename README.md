@@ -1,11 +1,5 @@
 # MTouch通用移动端手势库2.0
 
-> [demo](http://f2er.meitu.com/gxd/mtouch/example/index.html)
-
-> [git](https://gitlab.meitu.com/npm/meitu-mtouch)
-
-> [download](http://f2er.meitu.com/gxd/mtouch/dist/mtouch.min.js)
-
 ### 更新
 
 2.0版本
@@ -60,26 +54,7 @@ EVENT = [
 
 #### 引入:
 
-##### 1.直接使用公司私有npm进行引入;
-
-在shell直接使用Npm进行安装
-
-```js
-npm set registry http://npm.meitu-inc.com
-npm install @meitu/mtouch --save
-
-```
-
-```js
-import MTouch from '@meitu/mtouch';
-
-// 或者
-
-let MTouch = required('@meitu/mtouch');
-```
-
-
-##### 2.使用`import || required`直接引入;
+##### 1.使用`import || required`直接引入;
 
 ```js
 import MTouch from './mtouch.min';
@@ -88,7 +63,7 @@ new MTouch( options );
 
 ```
 
-##### 3.直接通过`script`标签引入;
+##### 2.直接通过`script`标签引入;
 
 ```js
 <script src="mtouch.min.js"></script>
