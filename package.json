@@ -1,40 +1,38 @@
 {
-  "name": "mtouch",
-  "version": "1.0.0",
-  "description": "通用手势组件",
-  "main": "dist/js/mtouch.min.js",
+  "name": "@meitu/mtouch",
+  "version": "2.0.0",
+  "description": "meitu library template.",
+  "main": "dist/mtouch.js",
+  "module": "dist/mtouch.es.js",
+  "moduleName": "MTouch",
   "scripts": {
-    "dev": "http-server -p 8080",
-    "watch": "cd assets;NODE_ENV=production webpack -w",
-    "deploy": "cd assets;NODE_ENV=production webpack -p",
-    "dist": "cd assets;NODE_ENV=production webpack -p"
+    "test": "mocha test/index.js",
+    "start": "cd example && http-server",
+    "watch": "NODE_ENV=example rollup -w -c rollup.config.js",
+    "dev": "NODE_ENV=development rollup -c rollup.config.js",
+    "prod": "NODE_ENV=production rollup -c rollup.config.js",
+    "publish": "rm -rf dist && npm run dev && npm run prod",
+    "lint": "eslint src"
   },
-  "dependencies": {
-    "upload": "^0.1.3"
+  "repository": {
+    "url": "https://gitlab.meitu.com/npm/meitu-mtouch.git",
+    "type": "git"
   },
+  "author": "gxd <gxd@meitu.com>",
+  "license": "MIT",
   "devDependencies": {
-    "babel-core": "^6.13.2",
-    "babel-loader": "^6.2.4",
-    "babel-preset-es2015": "^6.13.2",
-    "babel-preset-react": "^6.11.1",
-    "css-loader": "^0.23.1",
-    "extract-text-webpack-plugin": "^1.0.1",
-    "file-loader": "^0.9.0",
-    "html-withimg-loader": "^0.1.16",
-    "style-loader": "^0.13.0",
-    "webpack": "^1.12.9",
-    "webpack-dev-server": "^1.14.0",
-    "autoprefixer": "^6.4.0",
-    "html-webpack-plugin": "^2.7.1",
-    "node-sass": "^3.8.0",
-    "postcss": "^5.1.2",
-    "postcss-loader": "^0.9.1",
-    "postcss-px2rem": "^0.3.0",
-    "precss": "^1.4.0",
-    "sass": "^0.5.0",
-    "sass-loader": "^4.0.0",
-    "url-loader": "^0.5.7"
-  },
-  "author": "郭晓东",
-  "license": "ISC"
+    "babel-eslint": "^7.2.2",
+    "babel-plugin-syntax-flow": "^6.18.0",
+    "babel-plugin-transform-class-properties": "^6.24.1",
+    "babel-plugin-transform-flow-strip-types": "^6.22.0",
+    "babel-preset-es2015": "^6.24.1",
+    "eslint": "^3.19.0",
+    "expect.js": "^0.3.1",
+    "mocha": "^3.2.0",
+    "rollup-plugin-babel": "^2.7.1",
+    "rollup-plugin-node-resolve": "^3.0.0",
+    "rollup-plugin-sourcemaps": "^0.4.2",
+    "rollup-plugin-uglify": "^1.0.1",
+    "rollup-watch": "^3.2.2"
+  }
 }
