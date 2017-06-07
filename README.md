@@ -59,26 +59,7 @@ EVENT = [
 
 #### 引入:
 
-##### 1.直接使用公司私有 npm 进行引入;
-
-在shell直接使用 Npm 进行安装
-
-```js
-npm set registry http://npm.meitu-inc.com
-npm install @meitu/mtouch --save
-
-```
-
-```js
-import MTouch from '@meitu/mtouch';
-
-// 或者
-
-let MTouch = required('@meitu/mtouch');
-```
-
-
-##### 2.使用`import || required`直接引入;
+##### 1.使用`import || required`直接引入;
 
 ```js
 import MTouch from './mtouch.min';
@@ -87,7 +68,7 @@ new MTouch( options );
 
 ```
 
-##### 3.直接通过`script`标签引入;
+##### 2.直接通过`script`标签引入;
 
 ```js
 <script src="mtouch.min.js"></script>
