@@ -1,8 +1,13 @@
-# MTouch通用移动端手势库2.0
+# MTouch通用移动端手势库2.1.0
 
 ### 更新
 
+2.1版本
+
+> 新增销毁api，mtouch.destroy(); 可解除所有绑定事件；
+
 2.0版本
+
 > 1、剥离了业务逻辑，优化代码；
 
 > 2、调整单指缩放和单指旋转的使用方式，更为清晰，方便；
@@ -54,7 +59,26 @@ EVENT = [
 
 #### 引入:
 
-##### 1.使用`import || required`直接引入;
+##### 1.直接使用公司私有 npm 进行引入;
+
+在shell直接使用 Npm 进行安装
+
+```js
+npm set registry http://npm.meitu-inc.com
+npm install @meitu/mtouch --save
+
+```
+
+```js
+import MTouch from '@meitu/mtouch';
+
+// 或者
+
+let MTouch = required('@meitu/mtouch');
+```
+
+
+##### 2.使用`import || required`直接引入;
 
 ```js
 import MTouch from './mtouch.min';
@@ -63,7 +87,7 @@ new MTouch( options );
 
 ```
 
-##### 2.直接通过`script`标签引入;
+##### 3.直接通过`script`标签引入;
 
 ```js
 <script src="mtouch.min.js"></script>
@@ -148,7 +172,7 @@ new MTouch({
 })
 ```
 
-#### 业务方控制的逻辑；
+#### 使用方式；
 
 通过 `ev.delta` 暴露的运动增量来进行元素的操作；
 
@@ -202,3 +226,8 @@ new MTouch({
         console.log(ev);
     })
     ```
+##### 3. `destroy`:
+
+    `mtouch.destroy()`;
+
+解除事件绑定;
