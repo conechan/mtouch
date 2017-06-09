@@ -1,4 +1,4 @@
-# MTouch通用移动端手势库2.2.0
+# MTouch通用移动端手势库2.2.1
 
 ### 更新
 
@@ -224,13 +224,13 @@ MTouch('selector','selector').on('drag',(ev)=>{
 
 该方法可以用在实例化后，添加或删除某个事件的回调，例如：
 
-    ```js
-    mtouch.on('drag',(ev)=>{
-        console.log(ev);
-    })
-    ```
+```js
+mtouch.on('drag',(ev)=>{
+    console.log(ev);
+})
+```
 ##### 3. `destroy`:
 
-    `mtouch.destroy()`;
+`mtouch.destroy()`;
 
 解除事件绑定;
